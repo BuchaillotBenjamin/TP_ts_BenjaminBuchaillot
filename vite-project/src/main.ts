@@ -1,6 +1,6 @@
 import './style.css'
-import { Usuario } from '../types/usuario'
-import {UsuarioClass } from '../types/usuarioClass';
+import { Usuario } from '../types/Usuario'
+import {UsuarioClass } from '../types/UsuarioClass';
 
 const usuarios: Usuario[] =[
   {
