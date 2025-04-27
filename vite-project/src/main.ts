@@ -44,4 +44,35 @@ const admin1 = new AdminUsuario(4, "Admin", 45, "admin@mail.com", true,permisos)
 
 console.log("Admin:", admin1);
 
+const productos = [
+    {
+        id: 1,
+        nombre: "Laptop",
+        precio: 1200,
+        stock: 5
+    },
+    {
+        id: 2,
+        nombre: "Mouse",
+        precio: 20,
+        stock: 0
+    },
+    {
+        id: 3,
+        nombre: "Teclado",
+        precio: 50,
+        stock: 10
+    },
+    {
+        id: 4,
+        nombre: "Monitor",
+        precio: 300,
+        stock: 3
+    }
+];
+
+console.log(productos.map(producto => producto.nombre));
+
+console.log(productos.filter(producto => producto.stock > 0));
+
 
