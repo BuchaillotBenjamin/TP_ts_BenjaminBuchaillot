@@ -191,9 +191,9 @@ function renderizarUsuarios(usuarios: Usuario[]) {
 }
 
 //ejercicio 12
-const botonMostrar = document.getElementById('mostrarUsuarios');
-if (botonMostrar) {
-    botonMostrar.addEventListener('click', () => renderizarUsuarios(usuarios));
+const $botonMostrar = document.getElementById('mostrarUsuarios');
+if ($botonMostrar) {
+    $botonMostrar.addEventListener('click', () => renderizarUsuarios(usuarios));
 }
 
 
