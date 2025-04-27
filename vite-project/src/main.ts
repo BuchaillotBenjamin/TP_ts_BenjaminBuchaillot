@@ -3,6 +3,8 @@ import { Usuario } from '../types/Usuario'
 import {UsuarioClass } from '../types/UsuarioClass';
 import { AdminUsuario } from '../types/AdminUsuario';
 
+//ejercicio 2
+console.log("ejercicio 2");
 const usuarios: Usuario[] =[
   {
     id: 1,
@@ -29,7 +31,8 @@ const usuarios: Usuario[] =[
 
 console.log(usuarios.filter(usuario => usuario.activo === true))
 
-
+//ejercicio 3
+console.log("ejercicio 3");
 const usuario1 = new UsuarioClass(1, "María", 22, "maria@mail.com", true);
 const usuario2 = new UsuarioClass(2, "Carlos", 35, "carlos@mail.com", false);
 
@@ -39,11 +42,15 @@ usuario2.toggleActivo();
 console.log("Usuario 1:", usuario1);
 console.log("Usuario 2:", usuario2);
 
+//ejercicio 4
+console.log("ejercicio 4");
 let permisos: string[] = ["crear", "editar", "eliminar"];
 const admin1 = new AdminUsuario(4, "Admin", 45, "admin@mail.com", true,permisos);
 
 console.log("Admin:", admin1);
 
+//ejercicio 5
+console.log("ejercicio 5");
 const productos = [
     {
         id: 1,
@@ -74,5 +81,23 @@ const productos = [
 console.log(productos.map(producto => producto.nombre));
 
 console.log(productos.filter(producto => producto.stock > 0));
+
+//ejercicio 6
+console.log("ejercicio 6");
+console.log(productos.sort((a, b) => a.precio - b.precio));
+
+const nuevoProducto = {
+    id: 5,
+    nombre: "Webcam",
+    precio: 80,
+    stock: 15
+};
+productos.push(nuevoProducto);
+console.log(productos);
+
+productos.pop();
+console.log("Array final:", productos);
+
+//ejercicio 7
 
 
