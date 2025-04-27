@@ -96,8 +96,24 @@ productos.push(nuevoProducto);
 console.log(productos);
 
 productos.pop();
-console.log("Array final:", productos);
+console.log( productos);
 
 //ejercicio 7
+console.log("ejercicio 7");
+
+function getRandomItem<T>(array: T[]): T {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+}
+
+const numeros: number[] = [1, 2, 3, 4, 5];
+console.log("letra aleatorio:", getRandomItem(numeros));
+
+const palabras: string[] = ["a", "b", "c", "d", "e"];
+console.log("letra aleatoria:", getRandomItem(palabras));
+
+console.log("usuario aleatorio:", getRandomItem(usuarios));
+
+
 
 
