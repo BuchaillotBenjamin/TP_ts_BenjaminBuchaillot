@@ -1,6 +1,7 @@
 import './style.css'
 import { Usuario } from '../types/Usuario'
 import {UsuarioClass } from '../types/UsuarioClass';
+import { AdminUsuario } from '../types/AdminUsuario';
 
 const usuarios: Usuario[] =[
   {
@@ -37,3 +38,10 @@ usuario2.toggleActivo();
 
 console.log("Usuario 1:", usuario1);
 console.log("Usuario 2:", usuario2);
+
+let permisos: string[] = ["crear", "editar", "eliminar"];
+const admin1 = new AdminUsuario(4, "Admin", 45, "admin@mail.com", true,permisos);
+
+console.log("Admin:", admin1);
+
+
