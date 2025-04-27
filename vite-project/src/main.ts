@@ -2,6 +2,7 @@ import './style.css'
 import { Usuario } from '../types/Usuario'
 import {UsuarioClass } from '../types/UsuarioClass';
 import { AdminUsuario } from '../types/AdminUsuario';
+import { CajaClass } from '../types/Caja';
 
 //ejercicio 2
 console.log("ejercicio 2");
@@ -113,6 +114,19 @@ const palabras: string[] = ["a", "b", "c", "d", "e"];
 console.log("letra aleatoria:", getRandomItem(palabras));
 
 console.log("usuario aleatorio:", getRandomItem(usuarios));
+
+//ejercicio 8
+console.log("ejercicio 8");
+
+const cajaNumero = new CajaClass<number>(42);
+console.log(cajaNumero.contenido);
+
+const cajaTexto = new CajaClass<string>("hola mundo");
+console.log(cajaTexto.contenido);
+
+const cajaUsuario = new CajaClass<Usuario>(usuarios[0]);
+console.log(cajaUsuario.contenido);
+
 
 
 
