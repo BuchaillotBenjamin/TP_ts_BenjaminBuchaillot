@@ -130,16 +130,10 @@ console.log(cajaUsuario.contenido);
 //ejercicio 9
 console.log("ejercicio 9");
 
-interface Dato {
-    id: number;
-    titulo: string;
-    descripcion: string;
-}
-
-function obtenerDatos(): Promise<Dato[]> {
+function obtenerDatos(): Promise<any[]> {
     return new Promise((resolve) => {
         setTimeout(() => {
-            const datos: Dato[] = [
+            const datos = [
                 { id: 1, titulo: "Primer dato", descripcion: "Descripción 1" },
                 { id: 2, titulo: "Segundo dato", descripcion: "Descripción 2" },
                 { id: 3, titulo: "Tercer dato", descripcion: "Descripción 3" }
@@ -159,6 +153,21 @@ async function mostrarDatos() {
 }
 
 mostrarDatos();
+
+//ejercicio 10
+console.log("ejercicio 10");
+
+async function obtenerUsuariosAPI() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        const usuarios = await response.json();
+        console.log("Usuarios de la API:", usuarios);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+obtenerUsuariosAPI();
 
 
 
