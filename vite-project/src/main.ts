@@ -127,6 +127,39 @@ console.log(cajaTexto.contenido);
 const cajaUsuario = new CajaClass<Usuario>(usuarios[0]);
 console.log(cajaUsuario.contenido);
 
+//ejercicio 9
+console.log("ejercicio 9");
+
+interface Dato {
+    id: number;
+    titulo: string;
+    descripcion: string;
+}
+
+function obtenerDatos(): Promise<Dato[]> {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const datos: Dato[] = [
+                { id: 1, titulo: "Primer dato", descripcion: "Descripción 1" },
+                { id: 2, titulo: "Segundo dato", descripcion: "Descripción 2" },
+                { id: 3, titulo: "Tercer dato", descripcion: "Descripción 3" }
+            ];
+            resolve(datos);
+        }, 3000);
+    });
+}
+
+async function mostrarDatos() {
+    try {
+        const datos = await obtenerDatos();
+        console.log("Datos recibidos:", datos);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+mostrarDatos();
+
 
 
 
