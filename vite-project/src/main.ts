@@ -169,6 +169,30 @@ async function obtenerUsuariosAPI() {
 
 obtenerUsuariosAPI();
 
+//ejercicio 11
+console.log("ejercicio 11");
+
+function renderizarUsuarios(usuarios: Usuario[]) {
+    const $listaElement = document.getElementById('listaUsuarios');
+    if (!$listaElement) return;
+
+    const html = usuarios.map(usuario => `
+        <li>
+            <strong>${usuario.nombre}</strong>
+            <br>
+            Email: ${usuario.email}
+            <br>
+            Edad: ${usuario.edad}
+            <br>
+            Activo: ${usuario.activo ? 'Sí' : 'No'}            
+        </li>
+    `).join('');
+
+    $listaElement.innerHTML = html;
+}
+
+renderizarUsuarios(usuarios);
+
 
 
 
