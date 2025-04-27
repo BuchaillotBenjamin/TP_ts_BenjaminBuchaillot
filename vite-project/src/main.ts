@@ -170,7 +170,6 @@ async function obtenerUsuariosAPI() {
 obtenerUsuariosAPI();
 
 //ejercicio 11
-console.log("ejercicio 11");
 
 function renderizarUsuarios(usuarios: Usuario[]) {
     const $listaElement = document.getElementById('listaUsuarios');
@@ -191,7 +190,11 @@ function renderizarUsuarios(usuarios: Usuario[]) {
     $listaElement.innerHTML = html;
 }
 
-renderizarUsuarios(usuarios);
+//ejercicio 12
+const botonMostrar = document.getElementById('mostrarUsuarios');
+if (botonMostrar) {
+    botonMostrar.addEventListener('click', () => renderizarUsuarios(usuarios));
+}
 
 
 
